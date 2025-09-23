@@ -38,8 +38,8 @@ class ProductsNotifier extends AsyncNotifier<List<Product>> {
       }
 
       if (existingProduct != null) {
-        final updatedPurchases = [...existingProduct.purchases, purchaseRecord];
-        final updatedProduct = existingProduct.copyWith(
+        final updatedPurchases = [...existingProduct!.purchases, purchaseRecord];
+        final updatedProduct = existingProduct!.copyWith(
           purchases: updatedPurchases,
           updatedAt: DateTime.now(),
         );
